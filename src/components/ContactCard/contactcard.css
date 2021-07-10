@@ -1,0 +1,17 @@
+.card {
+  background: #fac05e;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.card > p {
+  color: #3a658a;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card > p > span {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 400;
+}

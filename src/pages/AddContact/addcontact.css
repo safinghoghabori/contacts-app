@@ -20,13 +20,17 @@
   flex-direction: column;
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #3a658a;
 }
 
-input {
+input,
+textarea {
   padding: 5px;
-  width: 250px;
+  width: 270px;
   border-radius: 2px;
   border: 0;
+  color: #3a658a;
+  outline: none;
 }
 
 .form__btn {
@@ -55,8 +59,9 @@ input {
 }
 
 @media screen and (max-width: 555px) {
-  input {
-    width: 100%;
+  input,
+  textarea {
+    width: 220px;
   }
 
   .form__heading {

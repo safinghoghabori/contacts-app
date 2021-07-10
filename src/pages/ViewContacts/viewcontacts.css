@@ -1,0 +1,10 @@
+.heading {
+  color: #3a658a;
+}
+
+.card__main {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  justify-content: center;
+}
