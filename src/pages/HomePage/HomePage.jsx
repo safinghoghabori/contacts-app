@@ -7,7 +7,7 @@ const HomePage = () => {
     <>
       <div className="heading">
         <h1>Contacts App</h1>
-        <p>#DPSCHALLANGE</p>
+        <p>#DPSCHALLENGE</p>
       </div>
       <div className="container">
         <div className="link__buttons">
