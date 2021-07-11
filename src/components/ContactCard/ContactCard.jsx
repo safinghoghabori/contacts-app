@@ -14,7 +14,7 @@ const ContactCard = ({ contact }) => {
           Email: <span>{contact.email}</span>
         </p>
         <p>
-          Address: <span>contact.address</span>
+          Address: <span>{contact.address}</span>
         </p>
       </div>
     </>
