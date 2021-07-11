@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+
 const path = require("path");
 
 const app = express();
@@ -56,4 +57,8 @@ app.get("/api/get-contacts", async (req, res) => {
   } catch (error) {
     res.status(500).send({ error: "Something went wrong" });
   }
+});
+
+app.get("*", (req, res) => {
+  return res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 });
