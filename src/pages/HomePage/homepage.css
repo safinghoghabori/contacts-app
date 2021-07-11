@@ -26,9 +26,6 @@ body {
   border-radius: 7px;
   outline: none;
   margin-bottom: 6px;
-}
-
-.link__buttons > * {
   text-decoration: none;
   color: #4e3509;
 }

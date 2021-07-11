@@ -10,12 +10,12 @@ const HomePage = () => {
         <p>#DPSCHALLENGE</p>
       </div>
       <div className="container">
-        <div className="link__buttons">
-          <Link to="/add-contact">Add Contact</Link>
-        </div>
-        <div className="link__buttons">
-          <Link to="/view-contacts">View Contacts</Link>
-        </div>
+        <Link to="/add-contact" className="link__buttons">
+          Add Contact
+        </Link>
+        <Link to="/view-contacts" className="link__buttons">
+          View Contacts
+        </Link>
       </div>
     </>
   );
