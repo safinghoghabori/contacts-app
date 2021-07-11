@@ -1,19 +1,43 @@
+require("dotenv").config();
+
 const express = require("express");
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-require("dotenv").config();
+//db file
+require("./src/db/mongoose");
 
 app.use(express.json());
+
+//import model
+const Contact = require("./src/model/contact");
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
 
+//endpoints
 app.post("/api/add-contact", async (req, res) => {
   try {
-    console.log(req.body);
+    const { firstname, lastname, email, address } = req.body;
+
+    if (!firstname || !lastname || !email || !address) {
+      return res.status(400).send({ error: "All fields are required." });
+    }
+
+    const contact = new Contact({
+      firstname,
+      lastname,
+      email,
+      address,
+    });
+
+    await contact
+      .save()
+      .then((res) => console.log("Contact saved."))
+      .catch((error) => console.log(error));
+    res.status(201).send({ msg: "Contact added successfully." });
   } catch (error) {
     res.status(500).send({ error: "Something went wrong" });
   }
@@ -21,7 +45,9 @@ app.post("/api/add-contact", async (req, res) => {
 
 app.get("/api/get-contacts", async (req, res) => {
   try {
-    console.log("working...");
+    const contacts = await Contact.find({});
+
+    res.status(201).send(contacts);
   } catch (error) {
     res.status(500).send({ error: "Something went wrong" });
   }
