@@ -5,16 +5,16 @@ const ContactCard = ({ contact }) => {
     <>
       <div className="card">
         <p>
-          First Name: <span>{contact.firstname}</span>
+          First Name: <span className="contact__data">{contact.firstname}</span>
         </p>
         <p>
-          Last Name: <span>{contact.lastname}</span>
+          Last Name: <span className="contact__data">{contact.lastname}</span>
         </p>
         <p>
           Email: <span>{contact.email}</span>
         </p>
         <p>
-          Address: <span>{contact.address}</span>
+          Address: <span className="contact__data">{contact.address}</span>
         </p>
       </div>
     </>
