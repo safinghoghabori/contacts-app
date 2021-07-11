@@ -48,6 +48,11 @@ textarea {
   border-radius: 3px;
 }
 
+.success {
+  color: #4e3509;
+  text-align: center;
+}
+
 .backbtn {
   background: none;
   color: #3a658a;
